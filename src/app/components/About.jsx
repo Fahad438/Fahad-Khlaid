@@ -1,6 +1,14 @@
+import { revalidateTag } from 'next/cache'
 import React from 'react'
 
-export const About = () => {
+export const About = async () => {
+    const res = await fetch('https://node-js-protoolio.onrender.com/about/663f7ffb3354cea649f27b42', {
+        next: {
+            revalidate: 60
+        }
+    });
+    const about = await res.json(); // Wait for the JSON data to be fetched and parsed
+
   return (
     <div id="about" className="my-12 lg:my-16 relative">
       <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
@@ -15,11 +23,7 @@ export const About = () => {
             Who I am?
           </p>
           <p className="text-gray-200 text-sm lg:text-lg text-justify">
-          I am a highly motivated software engineering with a passion for web development. I have a proven ability to 
-        design and build web applications independently as well as collaboratively. At present, I am focused on 
-        mastering Next JS to further strengthen my front-end development expertise. Additionally, I am actively 
-        freelancing in my free time which demonstrates a strong commitment to continuous learning and 
-        professional growth
+         {about.content}
           </p>
         </div>
         <div className="flex justify-center order-1 lg:order-2">
