@@ -1,12 +1,9 @@
 "use client";
-// @flow strict
 import { isValidEmail } from "../../../../utils/check-email";
-// import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
-// import { toast } from "react-toastify";
 
-export const ContactWithoutCaptcha = () => {
+export const ContactForm = () => {
   const [input, setInput] = useState({
     name: "",
     email: "",
@@ -32,25 +29,6 @@ export const ContactWithoutCaptcha = () => {
       return;
     } else {
       setError({ ...error, required: false });
-    }
-
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
-
-    try {
-      const res = await emailjs.send(serviceID, templateID, input, options);
-
-      if (res.status === 200) {
-        toast.success("Message sent successfully!");
-        setInput({
-          name: "",
-          email: "",
-          message: "",
-        });
-      }
-    } catch (error) {
-      toast.error(error?.text || error);
     }
   };
 

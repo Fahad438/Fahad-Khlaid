@@ -1,3 +1,4 @@
+const URL = "https://node-js-protoolio.onrender.com/skill";
 export const skillsData = [
   "HTML",
   "CSS",
@@ -10,13 +11,7 @@ export const skillsData = [
   "MySQL",
   "PostgreSQL",
   "Git",
-  "AWS",
-  "Bootstrap",
-  "Docker",
-  "Go",
   "Figma",
   "Firebase",
   "MaterialUI",
-  "Nginx",
-  "Strapi",
 ];

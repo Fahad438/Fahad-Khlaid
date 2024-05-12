@@ -1,5 +1,5 @@
 import { projectsData } from "../../../../utils/data/projects-data";
-import ProjectCard from "./project-card";
+import ProjectCard from "./ProjectCard";
 
 export const Projects = () => {
   return (
