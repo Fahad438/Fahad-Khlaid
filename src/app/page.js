@@ -7,6 +7,16 @@ import { Skills } from "./components/Skills";
 import { Footer } from "./components/Footer";
 import { ContactSection } from "./components/contact/Contact";
 import { Projects } from "./components/projects/Projects";
+import { EducaionList } from "./components/education/EducaionList";
+import { ContributionsGraph } from "./components/ContributionsGraph";
+import GitHubCalendar from 'react-github-calendar';
+
+
+
+
+
+
+
 
 export default function Home() {
   return (
@@ -17,6 +27,8 @@ export default function Home() {
       <Experience />
       <Skills />
       <Projects />
+      <EducaionList/>
+      <ContributionsGraph/> 
       <ContactSection />
       <Footer />
     </div>
