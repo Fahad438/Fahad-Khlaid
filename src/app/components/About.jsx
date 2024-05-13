@@ -1,19 +1,22 @@
-import { revalidateTag } from 'next/cache'
-import React from 'react'
+import { revalidateTag } from "next/cache";
+import React from "react";
 
 export const About = async () => {
-    const res = await fetch('https://node-js-protoolio.onrender.com/about/663f7ffb3354cea649f27b42', {
-        next: {
-            revalidate: 60
-        }
-    });
-    const about = await res.json(); // Wait for the JSON data to be fetched and parsed
+  const res = await fetch(
+    "https://node-js-protoolio.onrender.com/about/663f7ffb3354cea649f27b42",
+    {
+      next: {
+        revalidate: 60,
+      },
+    }
+  );
+  const about = await res.json(); // Wait for the JSON data to be fetched and parsed
 
   return (
     <div id="about" className="my-12 lg:my-16 relative">
       <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
         <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
-          ABOUT ME
+          About me
         </span>
         <span className="h-36 w-[2px] bg-[#1a1443]"></span>
       </div>
@@ -23,7 +26,7 @@ export const About = async () => {
             Who I am?
           </p>
           <p className="text-gray-200 text-sm lg:text-lg text-justify">
-         {about.content}
+            {about.content}
           </p>
         </div>
         <div className="flex justify-center order-1 lg:order-2">
@@ -37,5 +40,5 @@ export const About = async () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
