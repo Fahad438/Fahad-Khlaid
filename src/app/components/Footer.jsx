@@ -12,7 +12,7 @@ export const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-center">
           <p className="text-sm">
-            © Sorry I stole your code{" "}
+            © Fahad Khalid{" "}
             <Link
               target="_blank"
               href="https://www.linkedin.com/in/abu-said-bd/"
