@@ -18,7 +18,7 @@ export const Footer = () => {
               href="https://www.linkedin.com/in/abu-said-bd/"
               className="text-[#16f2b3]"
             >
-              {"It's not mine"}
+
             </Link>
           </p>
           {/* <p className="text-sm">
