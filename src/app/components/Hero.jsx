@@ -6,6 +6,8 @@ import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
+import { personalData } from "../../../utils/data/personal-data";
+
 
 export const Hero = () => {
   return (
@@ -31,14 +33,14 @@ export const Hero = () => {
 
           <div className="my-12 flex items-center gap-5">
             <Link
-              href="{personalData.github}"
+              href={personalData.github}
               target='_blank'
               className="transition-all text-[#16f2b3] hover:scale-125 duration-300"
             >
               <BsGithub size={30} />
             </Link>
             <Link
-              href="{personalData.linkedIn}"
+              href={personalData.linkedIn}
               target='_blank'
               className="transition-all text-[#16f2b3] hover:scale-125 duration-300"
             >

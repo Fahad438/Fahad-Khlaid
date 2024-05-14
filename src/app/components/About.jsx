@@ -1,5 +1,6 @@
 import { revalidateTag } from "next/cache";
 import React from "react";
+import Image from "next/image";
 
 export const About = async () => {
   const res = await fetch(
@@ -30,13 +31,13 @@ export const About = async () => {
           </p>
         </div>
         <div className="flex justify-center order-1 lg:order-2">
-          {/* <Image
-            src=""
+          <Image
+            src="/about.gif"
             width={280}
             height={280}
             alt="Abu Said"
-            className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
-          /> */}
+            className="rounded-lg transition-all duration-1000  hover:grayscale-0 hover:scale-110 cursor-pointer"
+          />
         </div>
       </div>
     </div>

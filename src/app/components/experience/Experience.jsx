@@ -10,7 +10,7 @@ import next from "next";
 
 export const Experience = async () => {
   const experienceResponse = await fetch(
-    "https://node-js-protoolio.onrender.com/experiences",
+    "https://node-js-protoolio.onrender.com/Fahad",
     {
       next: {
         revalidate: 60,
